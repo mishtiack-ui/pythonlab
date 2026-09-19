@@ -1,14 +1,14 @@
 num = int(input("Enter a number: "))
-if num &lt;= 1:
-print("Not a Prime Number")
+if num <= 1:
+   print("Not a Prime Number")
 else:
-prime = True
+    prime = True
 
-for i in range(2, num):
-if num % i == 0:
-prime = False
-break
+    for i in range(2, num):
+        if num % i == 0:
+           prime = False
+           break
 if prime:
-print("Prime Number")
+    print("Prime Number")
 else:
-print("Not a Prime Number")
+   print("Not a Prime Number")

@@ -8,7 +8,7 @@ print(b, end="")
 
 for i in range(3, n + 1):
 
-c = a + b
+    c = a + b
 
 print(c, end= "")
 
