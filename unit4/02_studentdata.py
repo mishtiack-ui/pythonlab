@@ -1,0 +1,37 @@
+while True:
+    print("\n===== STUDENT DATA MANAGER =====")
+    print("1. Add a new student record")
+    print("2. Display all student records")
+    print("3. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        print("\nEnter student details")
+
+        roll = input("Enter Roll Number: ")
+        name = input("Enter Student Name: ")
+        marks = input("Enter Marks: ")
+
+        with open("students.txt", "a") as file:
+            file.write(roll + "," + name + "," + marks + "\n")
+
+        print("Student record added successfully!")
+
+    elif choice == "2":
+        try:
+            with open("students.txt", "r") as file:
+                print("\n===== STUDENT RECORDS =====")
+
+                for record in file:
+                    print(record.strip())
+
+        except FileNotFoundError:
+            print("No student records found.")
+
+    elif choice == "3":
+        print("Exiting Student Data Manager. Thank you!")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
